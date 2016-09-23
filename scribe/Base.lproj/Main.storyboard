@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="scribe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,84 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45R-9e-shY">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rO-lB-9oF">
+                                        <frame key="frameInset" minX="142" minY="12" width="91" height="30"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" red="0.99562238412960558" green="1" blue="0.96155142757999457" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.44400757173323269" blue="0.4665417825412197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="KFB-Su-kx9"/>
+                                    <constraint firstItem="1rO-lB-9oF" firstAttribute="centerY" secondItem="45R-9e-shY" secondAttribute="centerY" id="MyQ-mL-Bkn"/>
+                                    <constraint firstItem="1rO-lB-9oF" firstAttribute="centerX" secondItem="45R-9e-shY" secondAttribute="centerX" id="Vof-1O-GFe"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTH-h7-Avc" customClass="CircleButton" customModule="scribe" customModuleProvider="target">
+                                <color key="backgroundColor" red="1" green="0.396078431372549" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="KRX-11-GMf"/>
+                                    <constraint firstAttribute="width" constant="60" id="vL3-ph-JkZ"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.77647058820000003" green="0.0" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XoQ-xg-kST"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY &amp; TRANSCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKw-mf-Cr6">
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="0.68313540427294961" green="0.68724222715736039" blue="0.66593584733320266" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap the button below to transcribe the audio embedded in this app" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5db-ji-SEF">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.47432567309583462" green="0.47717718908629436" blue="0.46238339727267153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="zDo-gm-Tf5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="OaK-YH-44c"/>
+                                    <constraint firstAttribute="width" constant="60" id="xJs-5a-nlD"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HTH-h7-Avc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Oj-jI-2ED"/>
+                            <constraint firstItem="45R-9e-shY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bbe-mA-9EA"/>
+                            <constraint firstItem="5db-ji-SEF" firstAttribute="top" secondItem="45R-9e-shY" secondAttribute="bottom" constant="20" id="Fry-rD-Y48"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nKw-mf-Cr6" secondAttribute="bottom" constant="8" id="JSh-dp-zzW"/>
+                            <constraint firstItem="nKw-mf-Cr6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R5c-y0-eXR"/>
+                            <constraint firstAttribute="trailing" secondItem="45R-9e-shY" secondAttribute="trailing" id="TSE-hE-gZZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5db-ji-SEF" secondAttribute="trailing" id="UlJ-NR-YMH"/>
+                            <constraint firstItem="zDo-gm-Tf5" firstAttribute="centerX" secondItem="HTH-h7-Avc" secondAttribute="centerX" id="UnL-CQ-yg9"/>
+                            <constraint firstItem="nKw-mf-Cr6" firstAttribute="top" secondItem="HTH-h7-Avc" secondAttribute="bottom" constant="8" id="Uxu-AB-vPb"/>
+                            <constraint firstItem="5db-ji-SEF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dTy-MU-maI"/>
+                            <constraint firstItem="zDo-gm-Tf5" firstAttribute="centerY" secondItem="HTH-h7-Avc" secondAttribute="centerY" id="goQ-N4-TzW"/>
+                            <constraint firstItem="45R-9e-shY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="q9b-ET-puN"/>
+                            <constraint firstItem="HTH-h7-Avc" firstAttribute="top" secondItem="5db-ji-SEF" secondAttribute="bottom" constant="20" id="vCb-Kf-KK2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activitySpinner" destination="zDo-gm-Tf5" id="wUT-XS-mGO"/>
+                        <outlet property="transcriptionTextField" destination="5db-ji-SEF" id="ibs-XJ-TuD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

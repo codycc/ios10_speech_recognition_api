@@ -12,6 +12,8 @@
 		0B9315E31D95A33400D4C537 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B9315E11D95A33400D4C537 /* Main.storyboard */; };
 		0B9315E51D95A33400D4C537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9315E41D95A33400D4C537 /* Assets.xcassets */; };
 		0B9315E81D95A33400D4C537 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B9315E61D95A33400D4C537 /* LaunchScreen.storyboard */; };
+		0B9315F31D95A73900D4C537 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9315F21D95A73900D4C537 /* CircleButton.swift */; };
+		0B9315F51D95AC9600D4C537 /* bothering.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B9315F41D95AC9600D4C537 /* bothering.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		0B9315E41D95A33400D4C537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B9315E71D95A33400D4C537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B9315E91D95A33400D4C537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B9315F21D95A73900D4C537 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		0B9315F41D95AC9600D4C537 /* bothering.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bothering.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,10 @@
 		0B9315DC1D95A33400D4C537 /* scribe */ = {
 			isa = PBXGroup;
 			children = (
+				0B9315F61D95ACA200D4C537 /* Resources */,
+				0B9315F11D95A6AA00D4C537 /* Controller */,
+				0B9315F01D95A6A700D4C537 /* View */,
+				0B9315EF1D95A6A300D4C537 /* Model */,
 				0B9315DD1D95A33400D4C537 /* AppDelegate.swift */,
 				0B9315DF1D95A33400D4C537 /* ViewController.swift */,
 				0B9315E11D95A33400D4C537 /* Main.storyboard */,
@@ -62,6 +70,36 @@
 				0B9315E91D95A33400D4C537 /* Info.plist */,
 			);
 			path = scribe;
+			sourceTree = "<group>";
+		};
+		0B9315EF1D95A6A300D4C537 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0B9315F01D95A6A700D4C537 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B9315F21D95A73900D4C537 /* CircleButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0B9315F11D95A6AA00D4C537 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0B9315F61D95ACA200D4C537 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0B9315F41D95AC9600D4C537 /* bothering.mp3 */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B9315E81D95A33400D4C537 /* LaunchScreen.storyboard in Resources */,
+				0B9315F51D95AC9600D4C537 /* bothering.mp3 in Resources */,
 				0B9315E51D95A33400D4C537 /* Assets.xcassets in Resources */,
 				0B9315E31D95A33400D4C537 /* Main.storyboard in Resources */,
 			);
@@ -137,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B9315F31D95A73900D4C537 /* CircleButton.swift in Sources */,
 				0B9315E01D95A33400D4C537 /* ViewController.swift in Sources */,
 				0B9315DE1D95A33400D4C537 /* AppDelegate.swift in Sources */,
 			);
